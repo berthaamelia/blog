@@ -53,9 +53,9 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>This is a very simple approach to plot your vibration/shock data vs. depth using python panda and matplotlib. The shock is categorised according to 4 levels: low (green), medium (yellow), high (red) and severe level (maroon). The plot is useful when you want to do a quick analysis post-run or as an appendix for end of well report. It is also easy to customise when it comes to the reference levels (normally in vector unit g) and colors.</p>
 
-<p>Input: excel file</p>
-
-<p>Output: plot from matplotlib
+<p>Input: excel file
+<br />
+Output: plot from matplotlib
 <img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/axial_shock.png" alt="Axial shock example" title="dummy axial shock plot" /></p>
 
 <p>Instruction.</p>
@@ -64,14 +64,13 @@
     <p>First, make sure your excel file has the shock channels, in this example i provided lateral shock channel. Erase all the invalid or -999.25 values. Make sure the name of the channel is simple an without any space.</p>
   </li>
   <li>
-    <p>Code. Check that you have all the required python library. Here I am using python 3.7</p>
+    <p>Code. Check that you have all the required python library. Here I am using python 3.7
+<br /></p>
   </li>
 </ol>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-
 <span class="kn">from</span> <span class="nn">matplotlib.collections</span> <span class="kn">import</span> <span class="n">LineCollection</span>
 
 <span class="c1">#define variables
