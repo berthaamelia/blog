@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-08-23T21:23:33+02:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">bertha jekyll blog</title><subtitle>Welcome! This is my first blog that i build from scratch with jekyll. Most of contents are about my boring life &amp; some are about programming contents that i found interesting to share it with you.</subtitle><author><name>Author Bertha Amelia</name></author><entry><title type="html">IBM project debater, could AI wisdom supersede human?</title><link href="http://localhost:4000/blog/ai/2020/08/23/IBM-project-debater.html" rel="alternate" type="text/html" title="IBM project debater, could AI wisdom supersede human?" /><published>2020-08-23T08:00:00+02:00</published><updated>2020-08-23T08:00:00+02:00</updated><id>http://localhost:4000/blog/ai/2020/08/23/IBM-project-debater</id><content type="html" xml:base="http://localhost:4000/blog/ai/2020/08/23/IBM-project-debater.html">&lt;p&gt;I would like to share with you an interesting YouTube video about IBM Project Debater. It is the first artificial intelligence system that can debate humans on complex topics. The clip was published about a year ago and the project itself is a research that IBM has been working on since 2012.&lt;/p&gt;
+
+&lt;p&gt;The video displayed the highlights of the first full live debate between an AI debater against, the 2016 World Debating Championships Grand Finalist and 2012 European Debate Champion Harish Natarajan. Both were only given 15 minutes of preparation time before the topic was revealed.&lt;/p&gt;
+
+&lt;p&gt;Harish was no doubt a great and well articulated debater. However, I was completely stunned with how clear and cohesive AI managed to address arguments on topic &lt;strong&gt;&lt;em&gt;“Whether or not pre-schools should be subsidized”&lt;/em&gt;&lt;/strong&gt;. It was incredible, yet hard to believe how can it be so close to perfection? I was expecting a slight error on the system or atleast a redundancy exhibited in addresing arguments since it uses learning algorithm. Though Harish eventually stole the winner’s title, it is how much AI has been progressing throughout time that left indelible imprint on my mind.&lt;/p&gt;
+
+&lt;p&gt;Could AI supersede human’s wisdom? Simply no in my humble opinion. 
+I am not an expert in AI, nor I understand much about deep learning. But one thing without question the AI is a system which requires consistently large flow of input to establish neural networks. The more input it receives, the better training of algorithm it achieves, to the point where it almost gives near perfect response. 
+We the human are the &lt;strong&gt;input&lt;/strong&gt; in which AI uses to produce an &lt;strong&gt;output&lt;/strong&gt;. 
+How can then AI be wiser than us when they in fact use us as the input? Put it short, AI is not a &lt;strong&gt;true knowledge&lt;/strong&gt;, it is simply a blackbox that produces knowledge which is sourced from the true human knowledge.&lt;/p&gt;
+
+&lt;p&gt;We are not in the race with AI nor we are in competition with it. On the other hand, we need to see it as a tool that would equip us to face a more challenging and complex world problems.&lt;br /&gt;
+The ultimate purpose of the project debater, as DR. Rahit Aharonov stated is to demonstrate a technology that has a power to aid the decision making process among people by bringing facts and different kind of argumentations.&lt;/p&gt;
+
+&lt;p&gt;I couldn’t agree more to what she stated as when it comes to critical decision-making, we humans are often conflicted with our (unconscious)biases. The AI in this case helps us to provide a more unbiased, less political and healthy decisions that will benefit towards all social layers. It is a useful tool that could serve as a mirror for us to reflect, improve our decision-making abilities and constructively criticize ourselves in order to be a better leader.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/koec1nnePAM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/UeF_N1r91RQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;br /&gt;Full-debate version.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3_yy0dnIc58&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Author Bertha Amelia</name></author><summary type="html">I would like to share with you an interesting YouTube video about IBM Project Debater. It is the first artificial intelligence system that can debate humans on complex topics. The clip was published about a year ago and the project itself is a research that IBM has been working on since 2012.</summary></entry><entry><title type="html">Connect bluetooth speaker to raspberry pi zero W with no desktop environment</title><link href="http://localhost:4000/blog/python/raspberrypi/2020/08/20/connect-bluetooth-speaker-to-raspi-zero.html" rel="alternate" type="text/html" title="Connect bluetooth speaker to raspberry pi zero W with no desktop environment" /><published>2020-08-20T20:00:00+02:00</published><updated>2020-08-20T20:00:00+02:00</updated><id>http://localhost:4000/blog/python/raspberrypi/2020/08/20/connect-bluetooth-speaker-to-raspi-zero</id><content type="html" xml:base="http://localhost:4000/blog/python/raspberrypi/2020/08/20/connect-bluetooth-speaker-to-raspi-zero.html">&lt;p&gt;My raspberry pi zero has been sitting idle in my cabinet for some time and my hand felt a little itchy to create something out of it. It was my first ever raspi that i owned so i had tons of sentimental value and i do not want to just dispose it. I was first thinking to put &lt;em&gt;KODI&lt;/em&gt;, some sort of mini Netflix but i discovered my pi zero was running to slow on it! Same story with &lt;em&gt;Calibre&lt;/em&gt;. Thought it will be pretty cool to have an e-book server in my pi but again it was running super slow. Gave up and ended up re-image everything. So my best bet is to just transform the good ol’ pi into a media player where i can at least play music on it.&lt;/p&gt;
+
+&lt;p&gt;It may seems easy in the first glance to connect your bluetooth speaker to raspberry pi. True! That is easy when you have proper raspbian desktop environment. However when you deal with raspberry pi zero with no desktop and you have to control everything from terminal, things can get pretty messy and (honestly) frustating. So i dedicate this topic for people who encounter problem connecting their device to raspberry pi zero just like what i had.&lt;/p&gt;
+
+&lt;p&gt;Problems experienced when installing:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I tried to connect my bluetooth speaker and android phone to raspi. Both are successfully paired, but failed to connect. I had error message &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;org.bluez.error. Failed&lt;/code&gt; &lt;br /&gt;I unpaired, removed and paired it all over again, reboot it, still no success.&lt;/li&gt;
+  &lt;li&gt;Tried:
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ sudo pactl load-module module-bluetooth-discover&lt;/code&gt;
+&lt;br /&gt;Output:
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Failure: Module initialization failed&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tools&quot;&gt;Tools:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Raspberry pi zero W (512 MB RAM). OS: Linux raspberry Pi OS Lite (32-bit). This is the latest pi zero that comes with wifi and bluetooth. The size is super cute!
+I purchased the starter kit from Kjell og Company shop for 649 kr. It comes in one complete package together with SD card, HDMI, power and USB adapter.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/berthaamelia/blog/master/images/raspi_zeroW.png&quot; alt=&quot;Raspberry pi zero W starter kit&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Andersson Bluetooth speaker that i purchased from NetOnNet for 99 kr.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After hours of googling, i finally came across one article on how to properly install it. I run it through ssh from my Mac and it worked flawlessly! Credit to the author! I am so excited for you to try this too. Here is the link:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/actuino/9548329d1bba6663a63886067af5e4cb&quot;&gt;Click here for installation guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;extra&quot;&gt;Extra:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Whenever you want to you connect your device, always start the command with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pulseaudio --start&lt;/code&gt;. Everytime i launched my bluetoothctl without launching the pulseaudio –start, it will refuse to connect with the speaker eventhough it is successfully paired.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now that you have your bluetooth speaker and your android phone connected to raspberry pi. Try open youtube video from your phone, raspi should be able to recognize it and play it through the speaker. You can also run google home assitant from your phone and let the speaker replies! I personaly believe this way is indeed better than installing home assitant over the pi itself due to limited features that Google provides on particular external API assigned for a non-google device.
+If you want to run .mp3, i recommend to install mpg321 instead of vlc player. 
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ sudo apt-get install mpg321&lt;/code&gt;
+&lt;br /&gt;To run the file
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ mpg321 -q /home/usr/Coldplay_Yellow.mp3&lt;/code&gt;
+&lt;br /&gt;Use -help for more information of the functions.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;sidenote&quot;&gt;Sidenote:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Just in case you still failed to launch your speaker after the attempt. Here is what i thought that could be wrong (which i learned from my experience).
+You probably are missing the PulseAudio bluetooth module. So install one with this:
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ sudo apt install bluetooth pulseaudio-module-bluetooth&lt;/code&gt;
+&lt;br /&gt;When it is successful, you should be able to execute:
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pactl load-module  module-bluetooth-discover&lt;/code&gt;
+&lt;br /&gt;Otherwise, try: 
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pactl unload-module  module-bluetooth-discover&lt;/code&gt;
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pactl load-module  module-bluetooth-discover&lt;/code&gt;
+&lt;br /&gt;It will return numbers like 22 or 24 or 26… Something like that.. It means it is successfully executed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In some articles stack overflow that i read, one solution suggested to edit the file /etc/pulse/default.pa and comment out (with an #) the following line
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#load-module module-bluetooth-discover&lt;/code&gt;
+&lt;br /&gt;This probably worked for others but it did not work for me, i eventually edited it back to the original.
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo nano /etc/pulse/default.pa&lt;/code&gt;
+&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;load-module module-bluetooth-discover&lt;/code&gt;
+&lt;br /&gt;The user also suggested to edit the file /usr/bin/start-pulseaudio-x11, but again it did not work for me and edited it back to original. I simply followed all the guides in the link above that i mentioned without editing any file and it worked 100%!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here is the original article that i quoted &lt;em&gt;https://askubuntu.com/questions/689281/pulseaudio-can-not-load-bluetooth-module/1121417#1121417&lt;/em&gt;&lt;/p&gt;</content><author><name>Author Bertha Amelia</name></author><summary type="html">My raspberry pi zero has been sitting idle in my cabinet for some time and my hand felt a little itchy to create something out of it. It was my first ever raspi that i owned so i had tons of sentimental value and i do not want to just dispose it. I was first thinking to put KODI, some sort of mini Netflix but i discovered my pi zero was running to slow on it! Same story with Calibre. Thought it will be pretty cool to have an e-book server in my pi but again it was running super slow. Gave up and ended up re-image everything. So my best bet is to just transform the good ol’ pi into a media player where i can at least play music on it.</summary></entry><entry><title type="html">Face detection program with raspberry pi 4</title><link href="http://localhost:4000/blog/python/opencv/2020/07/25/face-detection-program-with-raspberrypi.html" rel="alternate" type="text/html" title="Face detection program with raspberry pi 4" /><published>2020-07-25T18:30:00+02:00</published><updated>2020-07-25T18:30:00+02:00</updated><id>http://localhost:4000/blog/python/opencv/2020/07/25/face-detection-program-with-raspberrypi</id><content type="html" xml:base="http://localhost:4000/blog/python/opencv/2020/07/25/face-detection-program-with-raspberrypi.html">&lt;p&gt;I have been experimenting few online tutorials for face detection program and finally i have found the best one that i would like to share with you. Installing OpenCV module in raspberry pi is very labour-intensive (due to limited RAM) and there are too many tutorials out there that you will be confused which one to follow if it is your first time. Hence i would be sharing the link that i used and the equipment needed to launch your very own face detection program!&lt;/p&gt;
+
+&lt;h3 id=&quot;tools&quot;&gt;Tools:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Raspberry pi 4 (4 GB RAM). OS: Linux raspbian buster with desktop.
+I purchased it from Kjell og Company shop. I would recommend to use raspberry pi 4 for faster processing, i had used raspi 3b+ before still it took me ~8 hours to install OpenCV and for some reason it was built-in together with python 2.7. So i had to re-do the whole process again because i prefer python 3.7. To avoid the same mistake, I have then switched to raspi 4 which only took me 1 hour in total to install everything.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Power cable, screen, HDMI cable, mouse, keyboard, 16 gb SD card&lt;/li&gt;
+  &lt;li&gt;Camera module NOIR (No infra red filter for night mode)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here I am sharing the link on step-by-step to make face detection program using OpenCV. I did not write the guide, so please carefully follow each instruction written there. Make sure you do not skip any dependencies and no typo. The author pretty much explained everything straightforward and in comments section he also explained some issues that may occur while installing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.element14.com/community/community/raspberry-pi/blog/2019/02/11/raspberry-pi-face-recognition&quot;&gt;Click here for installation guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://www.element14.com/community/community/raspberry-pi/blog/2019/02/11/raspberry-pi-face-recognition&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It took 1 hour for my raspi 4 to successfully build &amp;amp; install OpenCV. Voila ! If it takes longer duration, check again your free disk space by typing “free -h”, perhaps there is issue with your memory space.&lt;/p&gt;
+
+&lt;p&gt;For my next mission, i plan to modify it in order to allow face detection as an input to unlock my DIY-google home assistant. I will post it here in the blog once i am done with the project :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/berthaamelia/blog/master/images/face_detection.jpg&quot; alt=&quot;Face recognition program&quot; title=&quot;face recognition program with raspi4&quot; /&gt;&lt;/p&gt;</content><author><name>Author Bertha Amelia</name></author><summary type="html">I have been experimenting few online tutorials for face detection program and finally i have found the best one that i would like to share with you. Installing OpenCV module in raspberry pi is very labour-intensive (due to limited RAM) and there are too many tutorials out there that you will be confused which one to follow if it is your first time. Hence i would be sharing the link that i used and the equipment needed to launch your very own face detection program!</summary></entry><entry><title type="html">Plot a basic drilling shock data with matplotlib</title><link href="http://localhost:4000/blog/python/matplotlib/2020/07/07/plot-shock-with-matplotlib.html" rel="alternate" type="text/html" title="Plot a basic drilling shock data with matplotlib" /><published>2020-07-07T20:00:00+02:00</published><updated>2020-07-07T20:00:00+02:00</updated><id>http://localhost:4000/blog/python/matplotlib/2020/07/07/plot-shock-with-matplotlib</id><content type="html" xml:base="http://localhost:4000/blog/python/matplotlib/2020/07/07/plot-shock-with-matplotlib.html">&lt;p&gt;This is a very simple approach to plot your vibration/shock data vs. depth using python panda and matplotlib. The shock is categorised according to 4 levels: low (green), medium (yellow), high (red) and severe level (maroon). The plot is useful when you want to do a quick analysis post-run or as an appendix for end of well report. It is also easy to customise when it comes to the reference levels (normally in vector unit g) and colors.&lt;/p&gt;
+
+&lt;p&gt;Input: excel file&lt;/p&gt;
+
+&lt;p&gt;Output: plot from matplotlib
+&lt;img src=&quot;https://raw.githubusercontent.com/berthaamelia/blog/master/images/axial_shock.png&quot; alt=&quot;Axial shock example&quot; title=&quot;dummy axial shock plot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instruction.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;First, make sure your excel file has the shock channels, in this example i provided lateral shock channel. Erase all the invalid or -999.25 values. Make sure the name of the channel is simple an without any space.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Code. Check that you have all the required python library. Here I am using python 3.7&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.collections&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LineCollection&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#define variables
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;your axial shock channel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;your hole depth channel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#set up colors &amp;amp; customise your shock level condition. Here I used some random numbers; low for any shock level below 2 g, medium for 2-4 g, high for 4-6 g and severe for anything above 6 g
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'green'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'yellow'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'red'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'maroon'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;5.0&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'white'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#convert time series to line segments
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:])]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;colored_lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LineCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linewidths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,))&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#this is for plotting
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'fivethirtyeight'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subplots&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colored_lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;autoscale_view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Axial Shock level(g)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hole Depth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Remember you can always customise your plot to make it look nicer and informative by for example displaying a legend or adjust the scale of the plot (using xticks or yticks).&lt;/p&gt;</content><author><name>Author Bertha Amelia</name></author><summary type="html">This is a very simple approach to plot your vibration/shock data vs. depth using python panda and matplotlib. The shock is categorised according to 4 levels: low (green), medium (yellow), high (red) and severe level (maroon). The plot is useful when you want to do a quick analysis post-run or as an appendix for end of well report. It is also easy to customise when it comes to the reference levels (normally in vector unit g) and colors.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/blog/jekyll/update/2020/07/05/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-07-05T16:03:16+02:00</published><updated>2020-07-05T16:03:16+02:00</updated><id>http://localhost:4000/blog/jekyll/update/2020/07/05/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog/jekyll/update/2020/07/05/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Author Bertha Amelia</name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
