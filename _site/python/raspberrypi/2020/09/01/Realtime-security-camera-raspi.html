@@ -4,40 +4,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Setting up mini real-time security camera at your house | bertha jekyll blog</title>
-<meta name="generator" content="Jekyll v3.8.7" />
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Setting up mini real-time security camera at your house" />
 <meta name="author" content="Author Bertha Amelia" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to compliment my pi :) The tutorial explained on how to set up a real-time security camera with raspi and stream it through VNC. That is such an excellent idea to try because streaming will not consume memory space in my Pi ! I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission, I believe the speed is relative to how fast your internet is." />
-<meta property="og:description" content="In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to compliment my pi :) The tutorial explained on how to set up a real-time security camera with raspi and stream it through VNC. That is such an excellent idea to try because streaming will not consume memory space in my Pi ! I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission, I believe the speed is relative to how fast your internet is." />
+<meta name="description" content="In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to complement my pi :smile: The tutorial explained on how to set up a real-time security camera with raspi and stream it through VLC media player, as simple as that! It is such an excellent idea to try because streaming will not consume memory space in my Pi ! I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission. I believe the speed is somehow relative to how fast your internet is." />
+<meta property="og:description" content="In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to complement my pi :smile: The tutorial explained on how to set up a real-time security camera with raspi and stream it through VLC media player, as simple as that! It is such an excellent idea to try because streaming will not consume memory space in my Pi ! I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission. I believe the speed is somehow relative to how fast your internet is." />
 <link rel="canonical" href="http://localhost:4000/blog/python/raspberrypi/2020/09/01/Realtime-security-camera-raspi.html" />
 <meta property="og:url" content="http://localhost:4000/blog/python/raspberrypi/2020/09/01/Realtime-security-camera-raspi.html" />
 <meta property="og:site_name" content="bertha jekyll blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-01T21:00:00+02:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-09-01T21:00:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/python/raspberrypi/2020/09/01/Realtime-security-camera-raspi.html"},"dateModified":"2020-09-01T21:00:00+02:00","author":{"@type":"Person","name":"Author Bertha Amelia"},"description":"In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to compliment my pi :) The tutorial explained on how to set up a real-time security camera with raspi and stream it through VNC. That is such an excellent idea to try because streaming will not consume memory space in my Pi ! I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission, I believe the speed is relative to how fast your internet is.","@type":"BlogPosting","url":"http://localhost:4000/blog/python/raspberrypi/2020/09/01/Realtime-security-camera-raspi.html","headline":"Setting up mini real-time security camera at your house","@context":"https://schema.org"}</script>
+{"headline":"Setting up mini real-time security camera at your house","dateModified":"2020-09-01T21:00:00+02:00","datePublished":"2020-09-01T21:00:00+02:00","author":{"@type":"Person","name":"Author Bertha Amelia"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/python/raspberrypi/2020/09/01/Realtime-security-camera-raspi.html"},"description":"In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to complement my pi :smile: The tutorial explained on how to set up a real-time security camera with raspi and stream it through VLC media player, as simple as that! It is such an excellent idea to try because streaming will not consume memory space in my Pi ! I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission. I believe the speed is somehow relative to how fast your internet is.","@type":"BlogPosting","url":"http://localhost:4000/blog/python/raspberrypi/2020/09/01/Realtime-security-camera-raspi.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="bertha jekyll blog" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><!--original title header from minima theme.
+  <div class="wrapper">
+<!--original title header from minima theme.
     <a class="site-title" rel="author" href="/blog/">bertha jekyll blog</a>
     -->
     <!--Custome: add title and logo header-->
-    <a class="site-title" rel="author" href="/blog/"><img src=" /blog/images/title-logo.png" alt=" bertha jekyll blog"</a>
+    <a class="site-title" rel="author" href="/blog/"><img src="/blog/images/title-logo.png" alt=" bertha jekyll blog">
     <!-- end of title & logo--><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
         <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
-      </nav></div>
+      </nav></a>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -51,27 +53,38 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to compliment my pi :) 
- The tutorial explained on how to set up a real-time security camera with raspi and stream it through VNC. That is such an excellent idea to try because streaming will not consume memory space in my Pi !
- I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission, I believe the speed is relative to how fast your internet is.</p>
+    <p>In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to complement my pi <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">
+ <br>The tutorial explained on how to set up a real-time security camera with raspi and stream it through VLC media player, as simple as that! It is such an excellent idea to try because streaming will not consume memory space in my Pi !
+ I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission. I believe the speed is somehow relative to how fast your internet is.</p>
 
 <h3 id="tools">Tools:</h3>
 <ol>
-  <li>Raspberry pi zero W (512 MB RAM). OS: Linux raspberry Pi OS Lite (32-bit).</li>
-  <li>Power cable, screen, HDMI cable, mouse, keyboard, 16 gb SD card</li>
+  <li>Raspberry pi zero W (512 MB RAM). OS: Linux raspberry Pi OS Lite (32-bit)</li>
   <li>Camera module. I bought this online from Aliexpress.com for about US$ 8.
 Though I have to wait for almost a month to arrive, I am super-satisfied with the features this camera offers. It has 5 MP wide angle fish eyes + night vision surveillance lenses 1080p and you can adjust its focus manually by rotating the lens. It also comes with Pi Zero camera adapter cable so you do not need to worry on finding one because it is quite hard to find. This stuff is worth every second moment I opened my post box with hope.</li>
 </ol>
 
-<p><a href="https://www.aliexpress.com/item/32714486681.html?spm=a2g0s.9042311.0.0.10984c4dxIPBs2">https://www.aliexpress.com/item/32714486681.html?spm=a2g0s.9042311.0.0.10984c4dxIPBs2</a></p>
+<p><img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/PiZero_camera.png" alt="Raspberry pi camera module 5MP Wide Angle"></p>
 
-<p><img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/PiZero_camera.png" alt="Raspberry pi camera module 5MP Wide Angle" /></p>
+<p>Basic program requirements:</p>
+<ul>
+  <li>VLC media player</li>
+  <li>Raspivid (it is by default installed already in your computer)</li>
+</ul>
 
-<p><img src="https://github.com/berthaamelia/blog/blob/master/images/test_surveillance_camera_raspizero.mp4?raw=true" alt="Raspberry pi camera module 5MP Wide Angle" /></p>
+<p>This is the complete video tutorial video on how to setup the pi:</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JeFs6Mx08Yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-  </div><a class="u-url" href="/blog/python/raspberrypi/2020/09/01/Realtime-security-camera-raspi.html" hidden></a>
+<p><br></p>
+<h3 id="sidenote">Sidenote:</h3>
+<p>Basically the idea behind this project is to use the raspi as an IP camera and it will stream the video over network by using RTSP (Real Time Streaming Protocol). Then we will use the raspivid in order to configure the stream setting.
+By default it is set to output 1080 video at 30 fps with a bit rate of 2 Mbps. However the setting can be adjusted according to your need, you just need to edit the script <code class="language-plaintext highlighter-rouge">rtsp-stream.sh</code>.
+<br>Probably the only downside with such system is its limitations to work with captured images, in contrary to OpenCV. The VLC stream only allow you to see real-time images, record videos and few other basic video editing.
+Honestly for me this application works like a charm. I mean OpenCV is awesome but that is more for another level of application. It optimizes a computer to solve vision problems like face recognition or video analysis. Typical cases is to get a license plate number of a car that was speeding, or assigning a robot vision to acknowledge human´s handwriting. As for day-to-day budget surveillance system, I believe my raspi Zero does fantastic job! Check out how I installed it in my apartment <img class="emoji" title=":house:" alt=":house:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png" height="20" width="20"> <img class="emoji" title=":wink:" alt=":wink:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png" height="20" width="20"></p>
+
+  </div>
+<a class="u-url" href="/blog/python/raspberrypi/2020/09/01/Realtime-security-camera-raspi.html" hidden></a>
 </article>
 
       </div>
@@ -85,10 +98,18 @@ Though I have to wait for almost a month to arrive, I am super-satisfied with th
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Author Bertha Amelia</li><li><a class="u-email" href="mailto:berthaamelia@gmail.com">berthaamelia@gmail.com</a></li><li>&copy; Bertha Jekyll Blog 2020</li></ul>
+          <li class="p-name">Author Bertha Amelia</li>
+<li><a class="u-email" href="mailto:berthaamelia@gmail.com">berthaamelia@gmail.com</a></li>
+<li>© Bertha Jekyll Blog 2020</li>
+</ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/bertha.amelia.35"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">bertha.amelia.35</span></a></li><li><a href="https://github.com/berthaamelia"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">berthaamelia</span></a></li><li><a href="https://www.linkedin.com/in/bertha-amelia-6b23b878"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">bertha-amelia-6b23b878</span></a></li></ul>
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://www.facebook.com/bertha.amelia.35"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">bertha.amelia.35</span></a></li>
+<li><a href="https://github.com/berthaamelia"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">berthaamelia</span></a></li>
+<li><a href="https://www.linkedin.com/in/bertha-amelia-6b23b878"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">bertha-amelia-6b23b878</span></a></li>
+</ul>
 </div>
 
       <div class="footer-col footer-col-3">

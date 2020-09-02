@@ -24,7 +24,7 @@ I purchased the starter kit from Kjell og Company shop for 649 kr. It comes in o
 
 ![Raspberry pi zero W starter kit](https://raw.githubusercontent.com/berthaamelia/blog/master/images/raspi_zeroW.png)
 
-After hours of googling, i finally came across one article on how to properly install it. I run it through ssh from my Mac and it worked flawlessly! Credit to the author! I am so excited for you to try this too. Here is the link:
+After hours of googling, I finally came across one article on how to properly install it. I run it through ssh from my Mac and it worked flawlessly! Credit to the author! I am so excited for you to try this too. Here is the link:
 
 [Click here for installation guide](https://gist.github.com/actuino/9548329d1bba6663a63886067af5e4cb)
 
@@ -34,7 +34,7 @@ After hours of googling, i finally came across one article on how to properly in
 1. Whenever you want to you connect your device, always start the command with 
 <br/>`pulseaudio --start`. Everytime i launched my bluetoothctl without launching the pulseaudio --start, it will refuse to connect with the speaker eventhough it is successfully paired.
 
-2. Now that you have your bluetooth speaker and your android phone connected to raspberry pi. Try open youtube video from your phone, raspi should be able to recognize it and play it through the speaker. You can also run google home assitant from your phone and let the speaker replies! I personaly believe this way is indeed better than installing home assistant over the pi itself due to limited features that Google provides on particular external API assigned for a non-google device.
+2. Now that you have your bluetooth speaker and your android phone connected to raspberry pi. Try open youtube video from your phone, raspi should be able to recognize it and play it through the speaker. You can also run google home assistant from your phone and let the speaker replies! I personaly believe this way is indeed better than installing home assistant over the pi itself due to limited features that Google provides on particular external API assigned for a non-google device.
 If you want to run .mp3, i recommend to install mpg321 instead of vlc player. 
 <br/>`$ sudo apt-get install mpg321`
 <br/>To run the file
