@@ -6,7 +6,7 @@ categories: [python,raspberrypi]
 ---
 
  In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to complement my pi :smile:
- <br/>The tutorial explained on how to set up a real-time security camera with raspi and stream it through VLC media player, as simple as that! It is such an excellent idea to try because streaming will not consume memory space in my Pi !
+ The tutorial explained on how to set up a real-time security camera with raspi and stream it through VLC media player, as simple as that! It is such an excellent idea to try because streaming will not consume memory space in my Pi !
  I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission. I believe the speed is somehow relative to how fast your internet is.
 
 ### Tools:
