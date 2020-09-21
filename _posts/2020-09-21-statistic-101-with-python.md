@@ -10,7 +10,8 @@ Some people may think it's boring, but I simply adore how one can generate patte
 
 Back in university, I normally used SPSS software to run statistical analysis. Now that I don't own any license of it, I challenged myself to use python instead. It is not easy at all obviously, however i believe it is the learning process that matter. Here I would like to share with you my starting journey of statistical analysis with python library in statistic such as statsmodels. Matplotlib and scikit come in handy too, especially to visualize the data. 
 
-### Basic linear regression step-by-step
+## Basic linear regression step-by-step
+### Create a scatter
 1. In order to identify any assumption, we must first determine a scenario where our independent variable could potentially impose a positive or negative relationship to our dependent variable. In this case, we want to find such relationship from the trend in a scatter plot. 
 2. Camera module. I bought this online from Aliexpress.com for about US$ 8.
 Though I have to wait for almost a month to arrive, I am super-satisfied with the features this camera offers. It has 5 MP wide angle fish eyes + night vision surveillance lenses 1080p and you can adjust its focus manually by rotating the lens. It also comes with Pi Zero camera adapter cable so you do not need to worry on finding one because it is quite hard to find. This stuff is worth every second moment I opened my post box with hope. 
