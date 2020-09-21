@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Setting up mini real-time security camera at your house"
-date:   2020-09-01 21:00:00 +0200
-categories: [python,raspberrypi]
+title:  "Statistic 101 with python"
+date:   2020-09-23 22:46:00 +0200
+categories: [python,machinelearning,statsmodels]
 ---
 
- In the previous post I have explained about how to turn your raspberry pi Zero into a music player through bluetooth. However not long after that I discovered another application that is perfect to complement my pi :smile:
- The tutorial explained on how to set up a real-time security camera with raspi and stream it through VLC media player, as simple as that! It is such an excellent idea to try because streaming will not consume memory space in my Pi !
- I followed all the guides from a tutorial video in YouTube which i will post it here and I can confirm the system works so well and it is streaming in high quality to your laptop. The small RAM in raspi Zero does not affect the quality and the speed of IP camera transmission. I believe the speed is somehow relative to how fast your internet is.
+I have always loved statistic, it was among my most favorite subject when I did my bachelor and master. Even in my most recent master thesis, I applied pure quantitative approach in order to prove the effect of income inequality in entrepreneurial activities in 70 different countries. 
+I simply adore how you can generate such pattern of information solely from a bunch of numbers in table form. The more you dig into, the more you discover the hidden layers of information underneath. There is no right or wrong, it is just a question of which method would you like to associate your argument with. Perhaps that is what makes it very much captivating, the fact that you could not manipulate details inside statistic? It is so pure and honest. 
 
 ### Tools:
 1. Raspberry pi zero W (512 MB RAM). OS: Linux raspberry Pi OS Lite (32-bit)

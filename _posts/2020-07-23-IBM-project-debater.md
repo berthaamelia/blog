@@ -12,7 +12,7 @@ Harish was no doubt a great and well articulated debater. However, I was complet
 
 Could AI supersede human's wisdom? Simply no in my humble opinion. 
 I am not an expert in AI, nor I understand much about deep learning. But one thing without question the AI is a system which requires consistently large flow of input to establish neural networks. The more input it receives, the better training of algorithm it achieves, to the point where it almost gives near perfect response. 
-We the human are the **input** in which AI uses to produce an **output**. 
+We human are the **input** in which AI uses to produce an **output**. 
 How can then AI be wiser than us when they in fact use us as the input? Put it short, AI is not a **true knowledge**, it is simply a blackbox that produces knowledge which is sourced from the true human knowledge. 
 
 We are not in the race with AI nor we are in competition with it. On the other hand, we need to see it as a tool that would equip us to face a more challenging and complex world problems.  
