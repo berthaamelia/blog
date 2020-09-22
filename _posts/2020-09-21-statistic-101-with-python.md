@@ -11,6 +11,7 @@ Some people may think it's boring, but I simply adore how one can generate patte
 Back in university, I normally used SPSS package to run statistical analysis. Now that I don't own any license of it, I challenged myself to use python instead. It is not easy at all obviously, however i believe it is the learning process that matter. Here I would like to share with you my starting journey of statistical analysis with python library in statistic such as statsmodels. Matplotlib and sci-kit come in handy too, especially to visualize the data. We will cover these library as well once we are done with the basic processing of linear regression :chart_with_upwards_trend:.
 
 ## Basic linear regression step-by-step
+<<<<<<< HEAD
 ### 1. Create a scatter-plot
 In order to establish an assumption, we must first identify a scenario where our independent variable could potentially impose a positive or negative relationship to our dependent variable. One of the easiest way to find such relationship is by recognizing the trend exists in a scatter plot. 
 <br/>I plotted few random drilling parameters taken from a dummy well. The file is originally in .LAS then I converted and prepared it in .xlsx format hence we can utilize dataframe pandas to read the excel file. In this case, I would like to test hypothesis that Rate of Penetration (ROP) is directly depending on the Rotation per Minute (RPM) and Weight on Bit (WOB).
@@ -71,3 +72,7 @@ plt.show()
 {% endhighlight %}
 
 ![Linear regression plot](https://raw.githubusercontent.com/berthaamelia/blog/master/images/regressionplot.png)
+=======
+### Create a scatter
+1. In order to identify any assumption, we must first determine a scenario where our independent variable could potentially impose a positive or negative relationship to our dependent variable. In this case, we want to find such relationship from the trend in a scatter plot. 
+>>>>>>> f124c494ab39672975bad8805dda51445f52a4f6
