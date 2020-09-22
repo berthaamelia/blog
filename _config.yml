@@ -28,6 +28,9 @@ baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://berthaamelia.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  berthaamelia
 
+#For code highlighting
+highlighter: rouge
+
 # Here is new field not from minima theme
 author: Author Bertha Amelia
 linkedin_username: bertha-amelia-6b23b878

@@ -16,28 +16,30 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-21T22:46:00+02:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/python/machinelearning/statsmodels/2020/09/21/statistic-101-with-python.html"},"datePublished":"2020-09-21T22:46:00+02:00","author":{"@type":"Person","name":"Author Bertha Amelia"},"description":"I have always loved statistic, it was among my most favorite subject when I did my bachelor and master. In my most recent master thesis, I applied statistical quantitative approach in order to justify the effect of income inequality relative to entrepreneurial activities in 70 different countries. Some people may think it’s boring, but I simply adore how one can generate patterns of information solely from a bunch of numbers in a table form. The more you dig into, the more you discover the hidden layers of information underneath. There is no right or wrong, it is just a question of which method would you like to associate your argument with. Perhaps that is the reason it becomes captivating, the fact that you could not manipulate details inside statistic? It is so pure and honest.","@type":"BlogPosting","url":"http://localhost:4000/blog/python/machinelearning/statsmodels/2020/09/21/statistic-101-with-python.html","headline":"Statistic 101 with python using drilling data","dateModified":"2020-09-21T22:46:00+02:00","@context":"https://schema.org"}</script>
+{"headline":"Statistic 101 with python using drilling data","dateModified":"2020-09-21T22:46:00+02:00","datePublished":"2020-09-21T22:46:00+02:00","author":{"@type":"Person","name":"Author Bertha Amelia"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/python/machinelearning/statsmodels/2020/09/21/statistic-101-with-python.html"},"description":"I have always loved statistic, it was among my most favorite subject when I did my bachelor and master. In my most recent master thesis, I applied statistical quantitative approach in order to justify the effect of income inequality relative to entrepreneurial activities in 70 different countries. Some people may think it’s boring, but I simply adore how one can generate patterns of information solely from a bunch of numbers in a table form. The more you dig into, the more you discover the hidden layers of information underneath. There is no right or wrong, it is just a question of which method would you like to associate your argument with. Perhaps that is the reason it becomes captivating, the fact that you could not manipulate details inside statistic? It is so pure and honest.","@type":"BlogPosting","url":"http://localhost:4000/blog/python/machinelearning/statsmodels/2020/09/21/statistic-101-with-python.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="bertha jekyll blog" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><!--original title header from minima theme.
+  <div class="wrapper">
+<!--original title header from minima theme.
     <a class="site-title" rel="author" href="/blog/">bertha jekyll blog</a>
     -->
     <!--Custome: add title and logo header-->
-    <a class="site-title" rel="author" href="/blog/"><img src=" /blog/images/title-logo.png" alt=" bertha jekyll blog"</a>
+    <a class="site-title" rel="author" href="/blog/"><img src="/blog/images/title-logo.png" alt=" bertha jekyll blog">
     <!-- end of title & logo--><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
         <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
-      </nav></div>
+      </nav></a>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -54,22 +56,69 @@
     <p>I have always loved statistic, it was among my most favorite subject when I did my bachelor and master. In my most recent master thesis, I applied statistical quantitative approach in order to justify the effect of income inequality relative to entrepreneurial activities in 70 different countries. 
 Some people may think it’s boring, but I simply adore how one can generate patterns of information solely from a bunch of numbers in a table form. The more you dig into, the more you discover the hidden layers of information underneath. There is no right or wrong, it is just a question of which method would you like to associate your argument with. Perhaps that is the reason it becomes captivating, the fact that you could not manipulate details inside statistic? It is so pure and honest.</p>
 
-<p>Back in university, I normally used SPSS software to run statistical analysis. Now that I don’t own any license of it, I challenged myself to use python instead. It is not easy at all obviously, however i believe it is the learning process that matter. Here I would like to share with you my starting journey of statistical analysis with python library in statistic such as statsmodels. Matplotlib and scikit come in handy too, especially to visualize the data.</p>
+<p>Back in university, I normally used SPSS package to run statistical analysis. Now that I don’t own any license of it, I challenged myself to use python instead. It is not easy at all obviously, however i believe it is the learning process that matter. Here I would like to share with you my starting journey of statistical analysis with python library in statistic such as statsmodels. Matplotlib and sci-kit come in handy too, especially to visualize the data. We will cover these library as well once we are done with the basic processing of linear regression <img class="emoji" title=":chart_with_upwards_trend:" alt=":chart_with_upwards_trend:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c8.png" height="20" width="20">.</p>
 
 <h2 id="basic-linear-regression-step-by-step">Basic linear regression step-by-step</h2>
-<h3 id="create-a-scatter-plot">Create a scatter-plot</h3>
-<ol>
-  <li>In order to establish an assumption, we must first identify a scenario where our independent variable could potentially impose a positive or negative relationship to our dependent variable. One of the easiest way to find such relationship is by recognizing the trend exists in a scatter plot.</li>
-</ol>
+<h3 id="1-create-a-scatter-plot">1. Create a scatter-plot</h3>
+<p>In order to establish an assumption, we must first identify a scenario where our independent variable could potentially impose a positive or negative relationship to our dependent variable. One of the easiest way to find such relationship is by recognizing the trend exists in a scatter plot. 
+<br>I plotted few random drilling parameters taken from a dummy well. The file is originally in .LAS then I converted and prepared it in .xlsx format hence we can utilize dataframe pandas to read the excel file. In this case, I would like to test hypothesis that Rate of Penetration (ROP) is directly depending on the Rotation per Minute (RPM) and Weight on Bit (WOB).</p>
 
-<p>I have plotted some drilling parameters in a well. The file is originally from .LAS then i converted it into .xlsx hence I can utilize dataframe to read the file.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
 
-<p>```python
-import pandas as pd</p>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s">"/Users/berthaamelia/Documents/Python/sample/dummy_well.xlsx"</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">]</span><span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">])</span>
 
-<p>`</p>
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"Bit_Weight"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s">"ROP_-_Average"</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s">"DHT001_Depth"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s">"colorbar=DHT001 Depth"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"surface WOB vs. ROP"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
 
-  </div><a class="u-url" href="/blog/python/machinelearning/statsmodels/2020/09/21/statistic-101-with-python.html" hidden></a>
+<span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"Top_Drive_RPM"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s">"ROP_-_Average"</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s">"DHT001_Depth"</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"surface RPM vs. ROP"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">colorbar</span><span class="p">()</span>
+</code></pre></div></div>
+<p><img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/scatterplot.png" alt="Scatterplot"></p>
+
+<p>The number (211) refers to no.of row=2, no.of column=1 and the last digit is where you want to place your current plot.
+Matplotlib.pyplot receives argument as such:
+<br>x= x-axis (surface WOB and RPM)
+<br>y= y-axis (ROP)
+<br>s= size 
+<br>c= color
+<br>alpha = 0.5 (transparency).
+<br>I am using the channel “Hole Depth” as the colorscale. You can as well play around with different colorscale, you may also assign a channel as the size reference too.</p>
+
+<h3 id="2-establish-linear-regression-model">2. Establish linear regression model</h3>
+<p>As we see in the scatter-plot above, there seems to be a cluster of data towards the ROP. Although it is not exclusively apparent, we may want to establish a linear regression model to test whether our hypothesis is statistically significant or not. To do so I will use the module sklearn and import its linear model.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_style</span><span class="p">(</span><span class="s">"whitegrid"</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s">"/Users/berthaamelia/Documents/Python/sample/dummy_well.xlsx"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"Bit_Weight"</span><span class="p">]).</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"ROP_-_Average"</span><span class="p">])</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">().</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">r_sq</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">score</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'coefficient of determination:'</span><span class="p">,</span> <span class="n">r_sq</span><span class="p">)</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"Bit_Weight"</span><span class="p">],</span><span class="n">y</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"ROP_-_Average"</span><span class="p">],</span> <span class="n">data</span><span class="o">=</span> <span class="n">df</span> <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s">'alpha'</span><span class="p">:</span><span class="mf">0.5</span><span class="p">},</span> <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'red'</span><span class="p">})</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span></code></pre></figure>
+
+<p><img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/regressionplot.png" alt="Linear regression plot"></p>
+
+  </div>
+<a class="u-url" href="/blog/python/machinelearning/statsmodels/2020/09/21/statistic-101-with-python.html" hidden></a>
 </article>
 
       </div>
@@ -83,10 +132,18 @@ import pandas as pd</p>
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Author Bertha Amelia</li><li><a class="u-email" href="mailto:berthaamelia@gmail.com">berthaamelia@gmail.com</a></li><li>&copy; Bertha Jekyll Blog 2020</li></ul>
+          <li class="p-name">Author Bertha Amelia</li>
+<li><a class="u-email" href="mailto:berthaamelia@gmail.com">berthaamelia@gmail.com</a></li>
+<li>© Bertha Jekyll Blog 2020</li>
+</ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/bertha.amelia.35"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">bertha.amelia.35</span></a></li><li><a href="https://github.com/berthaamelia"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">berthaamelia</span></a></li><li><a href="https://www.linkedin.com/in/bertha-amelia-6b23b878"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">bertha-amelia-6b23b878</span></a></li></ul>
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://www.facebook.com/bertha.amelia.35"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">bertha.amelia.35</span></a></li>
+<li><a href="https://github.com/berthaamelia"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">berthaamelia</span></a></li>
+<li><a href="https://www.linkedin.com/in/bertha-amelia-6b23b878"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">bertha-amelia-6b23b878</span></a></li>
+</ul>
 </div>
 
       <div class="footer-col footer-col-3">
