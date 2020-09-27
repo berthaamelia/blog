@@ -274,15 +274,62 @@ In this case, it will be exactly the same block code as writtent above, the diff
 <span class="k">print</span><span class="p">(</span><span class="s">'Mean Squared Error:'</span><span class="p">,</span> <span class="n">metrics</span><span class="p">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">yTest</span><span class="p">,</span> <span class="n">yPrediction</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="s">'Root Mean Squared Error:'</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">metrics</span><span class="p">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">yTest</span><span class="p">,</span> <span class="n">yPrediction</span><span class="p">)))</span>
 </code></pre></div></div>
-<p>For surface WOB:
-<br>Mean Absolute Error: 4.125982092922794
-<br>Mean Squared Error: 35.622605808248416
-<br>Root Mean Squared Error: 5.968467626472344</p>
 
-<p>For topdrive RPM:
-<br>Mean Absolute Error: 3.7542304735761456
-<br>Mean Squared Error: 32.938404440623884
-<br>Root Mean Squared Error: 5.73919893718835</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>surface WOB</th>
+      <th>surface RPM</th>
+      <th>Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mean Absolute Error (MAE)</td>
+      <td>4.125982092922794</td>
+      <td>3.7542304735761456</td>
+      <td>The mean of the absolute value of the errors. This is simply calculating mean of the difference between prediction and actual observation.</td>
+    </tr>
+    <tr>
+      <td>Mean Squared Error (MSE)</td>
+      <td>35.622605808248416</td>
+      <td>32.938404440623884</td>
+      <td>The mean of the squared errors.</td>
+    </tr>
+    <tr>
+      <td>Root Mean Squared Error (RMSE)</td>
+      <td>5.968467626472344</td>
+      <td>5.73919893718835</td>
+      <td>The square root of the mean of the squared errors.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>RMSE is the most popular metric and commonly used to interpret statistical data error. The RMSE for topdrive RPM is slightly less than RMSE for WOB, implying the predicted-y values for RPM are closer to the actual values, thus suggesting a better fit regression than the WOB.</p>
+
+<h3 id="5-extra-advanced-linear-regression-with-statsmodels">5. [Extra] Advanced linear regression with statsmodels</h3>
+<p>If you fancy SPSS just like me, you would appreciate the statsmodels package in python library. It provides a more comprehensive result and sophisticated look as compared to traditional scikit. Here is the example of runing statsmodels linear regression using the same data set for surface WOB.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="n">sm</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s">"/Users/berthaamelia/Documents/Python/sample/dummy_well.xlsx"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">]</span><span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">])</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"Bit_Weight"</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"ROP_-_Average"</span><span class="p">]</span>
+
+<span class="c1">#add constant to X
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">sm</span><span class="p">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="p">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">).</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">summary</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><br>Now if we compare the statistical results from statsmodels with scikit library, we obtained exactly the same results. R-squared is 0.119, const refers to the intercept which is 12.0775 and Bit_Weight refers to the slope which is 0.2713.</p>
+
+<p><br><img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/statsmodels_WOB.png" alt="statsmodels result for surface WOB"></p>
 
 <h4 id="interpretation-of-regression-results">Interpretation of regression results</h4>
 
@@ -305,36 +352,30 @@ In this case, it will be exactly the same block code as writtent above, the diff
     </tr>
     <tr>
       <td>Slope</td>
-      <td>It represents the change in the output Y due to a change of one unit in the interest rate (everything else held constant</td>
+      <td>represents the change in the output Y due to a change of one unit in the surface WOB parameter (everything else held constant).</td>
+    </tr>
+    <tr>
+      <td>std err</td>
+      <td>reflects the level of accuracy of the coefficients. The lower it is, the higher is the level of accuracy.</td>
+    </tr>
+    <tr>
+      <td>P &gt;t is your p-value</td>
+      <td>A p-value of less than 0.05 is considered to be statistically significant.</td>
+    </tr>
+    <tr>
+      <td>Confidence Interval</td>
+      <td>represents the range in which our coefficients are likely to fall (with a likelihood of 95%).</td>
     </tr>
   </tbody>
 </table>
 
-<p><br>Mean Absolute Error (MAE) is the mean of the absolute value of the errors. This is simply calculating mean of the difference between prediction and actual observation.
-<br>Mean Squared Error (MSE) is the mean of the squared errors
-<br>Root Mean Squared Error (RMSE) is the square root of the mean of the squared errors. This is the most popular metric and commonly used to interpret statistical data error. The topdrive RPM RMSE is slightly less than WOB, implying the predicted-y values for RPM are closer to the actual values, thus suggesting a better fit regression  than WOB.</p>
-
-<h3 id="5-extra-advanced-linear-regression-with-statsmodels">5. [Extra] Advanced linear regression with statsmodels</h3>
-<p>If you fancy SPSS just like me, you would appreciate the statsmodels package in python library. It provides a more comprehensive result and sophisticated look as compared to traditional scikit. Here is the example of runing statsmodels linear regression using the same data set for surface WOB.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="n">sm</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s">"/Users/berthaamelia/Documents/Python/sample/dummy_well.xlsx"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">]</span><span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">])</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"Bit_Weight"</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"ROP_-_Average"</span><span class="p">]</span>
-
-<span class="c1">#add constant to X
-</span><span class="n">x</span> <span class="o">=</span> <span class="n">sm</span><span class="p">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="p">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">).</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">summary</span><span class="p">())</span>
-</code></pre></div></div>
-
-<p><br>Now if we compare the statistical results from statsmodels with scikit library, we obtained exactly the same results. R-squared is 0.119, const refers to the intercept which is 12.0775 and Bit_Weight refers to the slope which is 0.2713.
-<img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/statsmodels_WOB.png" alt="statsmodels result for surface WOB"></p>
+<table>
+  <tbody>
+    <tr>
+      <td><em>Courtesy from https://datatofish.com/statsmodels-linear-regression/</em></td>
+    </tr>
+  </tbody>
+</table>
 
 <p><br>
 Reading source:

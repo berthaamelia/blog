@@ -197,27 +197,15 @@ print('Mean Absolute Error:', metrics.mean_absolute_error(yTest, yPrediction))
 print('Mean Squared Error:', metrics.mean_squared_error(yTest, yPrediction))
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(yTest, yPrediction)))
 ```
-For surface WOB:
-<br/>Mean Absolute Error: 4.125982092922794
-<br/>Mean Squared Error: 35.622605808248416
-<br/>Root Mean Squared Error: 5.968467626472344
 
-For topdrive RPM:
-<br/>Mean Absolute Error: 3.7542304735761456
-<br/>Mean Squared Error: 32.938404440623884
-<br/>Root Mean Squared Error: 5.73919893718835
+|Name|surface WOB|surface RPM|Interpretation|
+|-------|--------|--------|--------|
+|Mean Absolute Error (MAE)|4.125982092922794|3.7542304735761456|The mean of the absolute value of the errors. This is simply calculating mean of the difference between prediction and actual observation.|
+|Mean Squared Error (MSE)|35.622605808248416|32.938404440623884|The mean of the squared errors.|
+|Root Mean Squared Error (RMSE)|5.968467626472344|5.73919893718835|The square root of the mean of the squared errors.| 
 
-#### Interpretation of regression results
 
-|Name|Interpretation|
-|-------|--------|
-|R<sup>2</sup>|Reflects the fit of the model. R-squared values range from 0 to 1, where a higher value generally indicates a better fit, assuming certain conditions are met.|
-|Intercept|It means that when surface WOB or surface RPM coefficients are zero, then the expected output (i.e., the average ROP) would be equal to the Y-intercept.|
-|Slope|It represents the change in the output Y due to a change of one unit in the interest rate (everything else held constant|
-
-<br/>Mean Absolute Error (MAE) is the mean of the absolute value of the errors. This is simply calculating mean of the difference between prediction and actual observation.
-<br/>Mean Squared Error (MSE) is the mean of the squared errors
-<br/>Root Mean Squared Error (RMSE) is the square root of the mean of the squared errors. This is the most popular metric and commonly used to interpret statistical data error. The topdrive RPM RMSE is slightly less than WOB, implying the predicted-y values for RPM are closer to the actual values, thus suggesting a better fit regression  than WOB.
+RMSE is the most popular metric and commonly used to interpret statistical data error. The RMSE for topdrive RPM is slightly less than RMSE for WOB, implying the predicted-y values for RPM are closer to the actual values, thus suggesting a better fit regression than the WOB.
 
 ### 5. [Extra] Advanced linear regression with statsmodels
 If you fancy SPSS just like me, you would appreciate the statsmodels package in python library. It provides a more comprehensive result and sophisticated look as compared to traditional scikit. Here is the example of runing statsmodels linear regression using the same data set for surface WOB.
@@ -240,7 +228,21 @@ print(model.summary())
 ```
 
 <br/>Now if we compare the statistical results from statsmodels with scikit library, we obtained exactly the same results. R-squared is 0.119, const refers to the intercept which is 12.0775 and Bit_Weight refers to the slope which is 0.2713.
-![statsmodels result for surface WOB](https://raw.githubusercontent.com/berthaamelia/blog/master/images/statsmodels_WOB.png)
+
+<br/>![statsmodels result for surface WOB](https://raw.githubusercontent.com/berthaamelia/blog/master/images/statsmodels_WOB.png)
+
+#### Interpretation of regression results
+
+|Name|Interpretation|
+|-------|--------|
+|R<sup>2</sup>|Reflects the fit of the model. R-squared values range from 0 to 1, where a higher value generally indicates a better fit, assuming certain conditions are met.|
+|Intercept|It means that when surface WOB or surface RPM coefficients are zero, then the expected output (i.e., the average ROP) would be equal to the Y-intercept.|
+|Slope|represents the change in the output Y due to a change of one unit in the surface WOB parameter (everything else held constant).|
+|std err|reflects the level of accuracy of the coefficients. The lower it is, the higher is the level of accuracy.|
+|P >t is your p-value|A p-value of less than 0.05 is considered to be statistically significant.|
+|Confidence Interval|represents the range in which our coefficients are likely to fall (with a likelihood of 95%).|
+
+|*Courtesy from https://datatofish.com/statsmodels-linear-regression/*|
 
 <br/>
 Reading source:
