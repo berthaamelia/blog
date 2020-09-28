@@ -5,7 +5,7 @@ date:   2020-09-26 22:46:00 +0200
 categories: [python,machinelearning,statsmodels]
 ---
 
-I have always loved statistic, it was among my most favorite subject when I did my bachelor and master. In my most recent master thesis, I applied statistical quantitative approach in order to justify the effect of income inequality relative to entrepreneurial activities in 70 different countries. 
+I have always loved statistic, it was among my most favorite subject when I did my bachelor and master. In my most recent master thesis, I applied statistical quantitative approach in order to justify the effect of entrepreneurial activities relative to income inequality in 70 different countries. 
 Some people may think it's boring, but I simply adore how one can generate patterns of information solely from a bunch of numbers in a table form. The more you dig into, the more you discover the hidden layers of information underneath. There is no right or wrong, it is just a question of which method would you like to associate your argument with. Perhaps that is the reason it becomes captivating, the fact that you could not manipulate details inside statistic? It is so pure and honest. 
 
 Back in university, I normally used SPSS package to run statistical analysis. Now that I don't own any license of it, I challenged myself to use python instead. It is not easy at all obviously, however i believe it is the learning process that matter. Here I would like to share with you my starting journey of statistical analysis with python library in statistic such as Sci-kit and Matplotlib. Statsmodels comes handy too when it comes to advanced statistic. I will apply all these library in the study case to give general idea of how python can be used to interpret statistical data :chart_with_upwards_trend:.
@@ -13,7 +13,7 @@ Back in university, I normally used SPSS package to run statistical analysis. No
 ## Basic linear regression step-by-step
 ### 1. Create a scatter-plot
 In order to establish an assumption, we must first identify a scenario where our independent variable could potentially impose a positive or negative relationship to our dependent variable. One of the easiest way to find such relationship is by recognizing the trend exists in a scatter plot. 
-<br/>I plotted few random drilling parameters taken from a dummy well. The file is originally in .LAS then I converted and prepared it in .xlsx format hence we can utilize dataframe pandas to read the excel file. In this case, I would like to test hypothesis that Rate of Penetration (ROP) is directly depending on the Rotation per Minute (RPM) and Weight on Bit (WOB).
+<br/>I plotted few random drilling parameters taken from a dummy well. The file is originally in .LAS then I converted and prepared it in .xlsx format hence we can utilize dataframe pandas to read the excel file. In this case, I would like to test hypothesis that Rate of Penetration (ROP) is directly depending on the Rotation per Minute (RPM) or Weight on Bit (WOB).
 
 |![Fundamental linear regression equation](https://raw.githubusercontent.com/berthaamelia/blog/master/images/linear_stat_formula.png)|
 |:--:| 
@@ -102,7 +102,7 @@ plt.show()
 
 
 ### 3. Predict response using training set
-Now that we have generated our linear regression model, we proceed with testing the model using some random data. For this purpose we will need to split the data, we will use 80% of total data for training dataset and 20% for testing dataset. 
+Now that we have generated our linear regression model, we proceed with testing the model using some random data. For this purpose we will need to split the data, we will use 80% of total data as training dataset and 20% as testing dataset. 
 <br/>Let us first test the regression model one by one in order to avoid confusion when coding. Start with the first model where surface WOB is the independent variable and ROP is our dependent variable, we want to test whether the model is sufficient enough to predict ROP average based on WOB parameter. Then we will compare the result with another model where surface RPM is the predictor.
 
 ```python
@@ -162,6 +162,7 @@ How good is our model actually as compared to the real y-values? Here we can try
 
 ```python
 df_test = pd.DataFrame({'Actual': yTest, 'Predicted': yPrediction})
+print(df_test)
 #It will print out:
 #       Actual  Predicted
 #0       2.93  15.255099
@@ -220,8 +221,8 @@ df["DATETIME"]= pd.to_datetime(df["DATETIME"])
 x = df["Bit_Weight"]
 y = df["ROP_-_Average"]
 
-#add constant to X
-x = sm.add_constant(x)
+#add constant manually to X
+x = sm.add_constant(x)  
 model = sm.OLS(y,x).fit()
 predictions = model.predict(x)
 print(model.summary())
