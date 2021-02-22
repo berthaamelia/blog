@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Create a simple GUI program to plot drilling data"
-date:   2021-02-22 22:46:00 +0200
+date:   2021-02-22 21:46:00 +0200
 categories: [python,matplotlib,drilling]
 ---
 
-I have always loved statistic, it was among my most favorite subject when I did my b
+I found myself creating a simple stand-alone desktop application using python GUI is very fascinating. There is some sort of strange satisfaction because 
