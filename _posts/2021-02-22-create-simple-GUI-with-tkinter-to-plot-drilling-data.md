@@ -156,4 +156,4 @@ Here is how the GUI looks like when you run the script:
 ![ECD plot](https://raw.githubusercontent.com/berthaamelia/blog/master/images/ECD_plot.png "ECD plot")
 ![Vibration plot](https://raw.githubusercontent.com/berthaamelia/blog/master/images/Vibr_plot.png "Vibration plot")
 
-With the code above, feel free to adjust the scale of the channels, as well as the number of rows/columns that you wish. This tutorial is intended to just provide a brief explaination on how to plot a basic graph. I also have attached an example of the excel input template that is compatible for the script. Happy trying !
+With the code above, feel free to adjust the scale of the channels, as well as the number of rows/columns that you wish. This tutorial is intended to just provide a brief explaination on how to plot a basic graph. I also have attached an example of the excel input template that is compatible for the script. Happy trying!
