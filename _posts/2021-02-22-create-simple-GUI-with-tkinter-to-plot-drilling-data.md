@@ -158,4 +158,5 @@ Here is how the GUI looks like when you run the script:
 
 With the code above, feel free to adjust the scale of the channels, as well as the number of rows/columns that you wish. This tutorial is intended to just provide a brief explaination on how to plot a basic graph. I also have attached an example of the excel input template that is compatible for the script. Happy trying!
 
-<a href="/download/log_sample_input.xlsx" download>Download Sample Excel File</a> 
+
+<a id="raw-url" href="https://raw.githubusercontent.com/berthaamelia/blog/master/download/log_sample_input.xlsx">Download Sample Excel File</a>
