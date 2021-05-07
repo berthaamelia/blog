@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Create a simple GUI tkinter to plot drilling data | bertha jekyll blog</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Create a simple GUI tkinter to plot drilling data" />
+<meta name="author" content="Author Bertha Amelia" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I found myself creating a simple stand-alone desktop application using python GUI (Graphical User Interface) is very fascinating. To write a working code is one thing but to be able to create an interface using native elements in order for others to easily access is another new level. The challenge is to be able to switch the mindset from developer perspective into user, and how to conveniently incorporate the GUI code without losing focus on the main purpose of the program." />
+<meta property="og:description" content="I found myself creating a simple stand-alone desktop application using python GUI (Graphical User Interface) is very fascinating. To write a working code is one thing but to be able to create an interface using native elements in order for others to easily access is another new level. The challenge is to be able to switch the mindset from developer perspective into user, and how to conveniently incorporate the GUI code without losing focus on the main purpose of the program." />
+<link rel="canonical" href="http://localhost:4000/blog/python/matplotlib/drilling/2021/02/21/create-simple-GUI-with-tkinter-to-plot-drilling-data.html" />
+<meta property="og:url" content="http://localhost:4000/blog/python/matplotlib/drilling/2021/02/21/create-simple-GUI-with-tkinter-to-plot-drilling-data.html" />
+<meta property="og:site_name" content="bertha jekyll blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-21T07:46:00+01:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/blog/python/matplotlib/drilling/2021/02/21/create-simple-GUI-with-tkinter-to-plot-drilling-data.html","dateModified":"2021-02-21T07:46:00+01:00","datePublished":"2021-02-21T07:46:00+01:00","headline":"Create a simple GUI tkinter to plot drilling data","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/python/matplotlib/drilling/2021/02/21/create-simple-GUI-with-tkinter-to-plot-drilling-data.html"},"author":{"@type":"Person","name":"Author Bertha Amelia"},"description":"I found myself creating a simple stand-alone desktop application using python GUI (Graphical User Interface) is very fascinating. To write a working code is one thing but to be able to create an interface using native elements in order for others to easily access is another new level. The challenge is to be able to switch the mindset from developer perspective into user, and how to conveniently incorporate the GUI code without losing focus on the main purpose of the program.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="bertha jekyll blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><!--original title header from minima theme.
+    <a class="site-title" rel="author" href="/blog/">bertha jekyll blog</a>
+    -->
+    <!--Custome: add title and logo header-->
+    <a class="site-title" rel="author" href="/blog/"><img src=" /blog/images/title-logo.png" alt=" bertha jekyll blog"</a>
+    <!-- end of title & logo--><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Create a simple GUI  tkinter to plot drilling data</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-02-21T07:46:00+01:00" itemprop="datePublished">Feb 21, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I found myself creating a simple stand-alone desktop application using python GUI (Graphical User Interface) is very fascinating. To write a working code is one thing but to be able to create an interface using native elements in order for others to easily access is another new level. The challenge is to be able to switch the mindset from developer perspective into user, and how to conveniently incorporate the GUI code without losing focus on the main purpose of the program.</p>
+
+<p>Depending on what the program would do. Most of the time I will use tkinter module to build GUI, however for a rather simple GUI application (when there is not much interface required), I would go for easyGUI module. The latter is eloquent, it comes with built-in function calls hence you write shorter code. For this blog, I have to use tkinter as it allows me to build checkbox options, but for another chance I will also write content on how to write a program with easyGUI.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1">#Need to register converters for datetime conversion purpose
+</span><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">register_matplotlib_converters</span>
+<span class="n">register_matplotlib_converters</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_style</span><span class="p">(</span><span class="s">"whitegrid"</span><span class="p">,</span> <span class="p">{</span><span class="s">'axes.grid'</span> <span class="p">:</span> <span class="bp">True</span><span class="p">})</span>
+<span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
+<span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">filedialog</span>
+<span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="c1"># setting the windows size
+</span><span class="n">root</span><span class="p">.</span><span class="n">geometry</span><span class="p">(</span><span class="s">"800x600"</span><span class="p">)</span>
+
+<span class="c1"># declaring string variable for storing name and password
+</span><span class="n">input_from_time</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">StringVar</span><span class="p">()</span>
+<span class="n">input_to_time</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">StringVar</span><span class="p">()</span>
+<span class="c1">#input_excel = tk.StringVar()
+</span><span class="n">var1</span><span class="o">=</span> <span class="n">IntVar</span><span class="p">()</span>
+<span class="n">var2</span><span class="o">=</span> <span class="n">IntVar</span><span class="p">()</span>
+<span class="n">var3</span><span class="o">=</span> <span class="n">IntVar</span><span class="p">()</span>
+
+<span class="c1">#Assign checkbox for each channel !Remember to declare the Var for ea.checkbox!
+</span><span class="n">Checkbutton</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">"Surface parameters plot"</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">var1</span><span class="p">).</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Checkbutton</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">"Vibration Plot"</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">var2</span><span class="p">).</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Checkbutton</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">"ECD plot"</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">var3</span><span class="p">).</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># defining a function and print them on the screen
+</span><span class="k">def</span> <span class="nf">submit</span><span class="p">():</span>
+    <span class="n">from_time</span> <span class="o">=</span> <span class="n">input_from_time</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="n">to_time</span> <span class="o">=</span> <span class="n">input_to_time</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+
+    <span class="n">label1</span><span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">f"You are plotting interval </span><span class="si">{</span><span class="n">from_time</span><span class="si">}</span><span class="s"> to </span><span class="si">{</span><span class="n">to_time</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">label1</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">open_file</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">filename</span>
+    <span class="n">filename</span><span class="o">=</span> <span class="n">filedialog</span><span class="p">.</span><span class="n">askopenfilename</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"Open a file"</span><span class="p">,</span><span class="n">initialdir</span><span class="o">=</span><span class="s">"/"</span><span class="p">,</span> <span class="n">filetypes</span><span class="o">=</span><span class="p">[(</span><span class="s">"Excel"</span><span class="p">,</span> <span class="s">"*.xlsx"</span><span class="p">)])</span>
+    <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+    <span class="n">filename_label</span><span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="p">{</span><span class="n">filename</span><span class="p">},</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">filename_label</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot</span><span class="p">():</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">from_time</span> <span class="o">=</span> <span class="n">input_from_time</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="n">to_time</span> <span class="o">=</span> <span class="n">input_to_time</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="c1">#Update the slicing location (Time-based YYYYMMDD)
+</span>    <span class="n">sliced_time</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">from_time</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">to_time</span><span class="p">)]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DATETIME"</span><span class="p">]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">x</span><span class="p">).</span><span class="n">values</span><span class="p">.</span><span class="n">astype</span><span class="p">(</span><span class="s">'datetime64[ms]'</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">var1</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="c1">#Start plotting
+</span>        <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># Share x-axis (Hole depth) to all subplots
+</span>        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Flow_In_Rate"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"cyan"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Flow rate(lpm)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Pump_Pressure"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"red"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Pump Pressure(bar)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Top_Drive_RPM"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"gold"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Top_Drive_RPM"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Bit_Weight"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"black"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"WOB(t)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Top_Drive_Torque"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"lime"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Torque(kn.m)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"ROP_-_Average"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"blue"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"ROP(m/hr)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Block_Height"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"darkviolet"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Block height(m)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>  <span class="c1"># Assign unique legend position
+</span>        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">var2</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="c1">#Start plotting
+</span>        <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># Share x-axis (Hole depth) to all subplots
+</span>        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Flow_In_Rate"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"cyan"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Flow rate(lpm)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Pump_Pressure"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"red"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Pump Pressure(bar)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DHT001_Rot_Gyro_Max"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"gray"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Max rotational vibr."</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DHT001_Rot_Gyro_Min"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"yellow"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Min rotational vibr."</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Top_Drive_RPM"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"green"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Topdrive RPM"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DHT001_Accel_Lat_Local_Stdev"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"blue"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Lateral vibr."</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DHT001_Accel_Axial_Z_Max"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"purple"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Max axial vibr."</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DHT001_Accel_Axial_Z_Min"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"magenta"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Min axial vibr."</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>  <span class="c1"># Assign unique legend position
+</span>        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">var3</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="c1">#Start plotting
+</span>        <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># Share x-axis (Hole depth) to all subplots
+</span>        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Flow_In_Rate"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"cyan"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Flow rate(lpm)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"Pump_Pressure"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"red"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Pump Pressure(bar)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DHT001_EMW_RSC"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"coral"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"ECD Downhole(SG)"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DHT001_Rot_Gyro_Max"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"gray"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Max rotational vibr."</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sliced_time</span><span class="p">[</span><span class="s">"DHT001_Rot_Gyro_Min"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"yellow"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">"Min rotational vibr."</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>  <span class="c1"># Assign unique legend position
+</span>        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s">"upper right"</span><span class="p">)</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+<span class="c1"># creating a label using widget Label
+</span><span class="n">from_time_label</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">'From time'</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s">'calibre'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'bold'</span><span class="p">))</span>
+<span class="n">to_time_label</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">'To time'</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s">'calibre'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'bold'</span><span class="p">))</span>
+<span class="n">excel_label</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">'Input Excel'</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s">'calibre'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'bold'</span><span class="p">))</span>
+
+<span class="n">from_time_label2</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">'Use format YYYYMMDD&lt;space&gt;HHMMSS'</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s">'calibre'</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">from_time_label3</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">'Eg. 20210108 053000'</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s">'calibre'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">"italic"</span><span class="p">))</span>
+
+<span class="n">channels_list</span><span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">"Tick plot to display: "</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s">"Silkscreen"</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">"bold"</span><span class="p">),</span> <span class="n">pady</span><span class="o">=</span><span class="mi">20</span><span class="p">).</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># creating an entry for input using widget Entry
+</span><span class="n">from_time_entry</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">textvariable</span><span class="o">=</span><span class="n">input_from_time</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s">'calibre'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'normal'</span><span class="p">))</span>
+<span class="n">to_time_entry</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">textvariable</span><span class="o">=</span><span class="n">input_to_time</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s">'calibre'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'normal'</span><span class="p">))</span>
+
+<span class="c1"># creating a button using the widget Button that will call the function
+</span><span class="n">import_btn</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">'Insert file'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">open_file</span><span class="p">)</span>
+<span class="n">plot_btn</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s">'Plot'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">plot</span><span class="p">)</span>
+
+<span class="c1"># placing the label and entry in the required position using grid method
+</span><span class="n">from_time_label</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">to_time_label</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">from_time_label2</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">from_time_label3</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">excel_label</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">from_time_entry</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">to_time_entry</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">import_btn</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="p">.</span><span class="n">E</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plot_btn</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="n">tk</span><span class="p">.</span><span class="n">E</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># performing an infinite loop for the window to display
+</span><span class="n">root</span><span class="p">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Here is how the GUI looks like when you run the script:
+<img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/Log_plot_GUI.png" alt="Main display" title="Main display" />
+<img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/Surface_plot.png" alt="Surface parameters plot" title="Surface parameters plot" />
+<img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/ECD_plot.png" alt="ECD plot" title="ECD plot" />
+<img src="https://raw.githubusercontent.com/berthaamelia/blog/master/images/Vibr_plot.png" alt="Vibration plot" title="Vibration plot" /></p>
+
+<p>With the code above, feel free to adjust the scale of the channels, as well as the number of rows/columns that you wish. This tutorial is intended to just provide a brief explaination on how to plot a basic graph. I also have attached an example of the excel input template that is compatible for the script. Happy trying !</p>
+
+  </div><a class="u-url" href="/blog/python/matplotlib/drilling/2021/02/21/create-simple-GUI-with-tkinter-to-plot-drilling-data.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">bertha jekyll blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Author Bertha Amelia</li><li><a class="u-email" href="mailto:berthaamelia@gmail.com">berthaamelia@gmail.com</a></li><li>&copy; Bertha Jekyll Blog 2021</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/bertha.amelia.35"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">bertha.amelia.35</span></a></li><li><a href="https://github.com/berthaamelia"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">berthaamelia</span></a></li><li><a href="https://www.linkedin.com/in/bertha-amelia-6b23b878"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">bertha-amelia-6b23b878</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Welcome! This is my first blog that i build from scratch with jekyll. Most of contents are about my boring life &amp; some are about programming contents that i found interesting to share it with you.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
